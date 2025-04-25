@@ -9,7 +9,7 @@ public static void main(String[] args) {
     Scanner entrada = new Scanner (System.in);
 
     //Apresentção
-    System.out.println("\n\t\t\t == Validador de Triângulo --\n");
+    System.out.println("\n\t\t\t == Validador de Triângulo dos que Sobe a Neblina --\n");
 
     //Entradas
     System.out.print("Informe o lado A: ");
@@ -23,11 +23,18 @@ public static void main(String[] args) {
     if((a < (b+c)) && (b < (a + c)) && ( c < (a+b))){
         //É triângulo
         System.out.printf("\n%d, %d e %d formam triangulo!\n" , a, b, c);
-    
+        
+        if((a == b) && (b == c)){
+            System.out.println("Triângulo Isóceles!!");
+        } else if(( a == b) || (b == c) || (a == c)){
+            System.out.println("Triângulo Equilátero!!");
+        } else {
+            System.out.println("Triângulo Escaleno!!");
+        }
     } else {
-        //Não é triângulo2
+        //Não é triângulo
         System.out.printf("\n%d, %d e %d NÃO formam triângulo!\n", a, b, c);
-            
+
     }
 }
 }
